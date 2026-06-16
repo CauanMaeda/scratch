@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Infotec - Projetos Scratch</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:#0f172a;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+.logo h1{
+    color:#38bdf8;
+    font-size:2rem;
+}
+
+.logo span{
+    color:#cbd5e1;
+    font-size:.9rem;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.guitar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:50px;
+
+    padding:80px 8%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+    );
+
+    color:white;
+}
+
+.todo h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.todo p{
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.hero{
+    width:100%;
+    max-width:500px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.4);
+}
+
+/* BOTÕES */
+
+.card-btn,
+.card-btn2{
+
+    border:none;
+
+    background:#0284c7;
+
+    color:white;
+
+    cursor:pointer;
+
+    padding:14px 24px;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.card-btn:hover,
+.card-btn2:hover{
+    background:#0369a1;
+    transform:translateY(-3px);
+}
+
+/* SOBRE */
+
+.sec1{
+    text-align:center;
+    padding:90px 10%;
+}
+
+.tag{
+    background:#dbeafe;
+    color:#0284c7;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+}
+
+.sec1 h1{
+    margin-top:20px;
+    font-size:3rem;
+}
+
+.sec1 p{
+    max-width:700px;
+    margin:20px auto;
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* GRID */
+
+.sec2{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    padding:0 8% 80px;
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+}
+
+.card-img{
+
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+}
+
+.card-box{
+    padding:20px;
+}
+
+.card-title{
+    min-height:60px;
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:50px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+}
+
+.siteetec{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+}
+
+.social{
+
+    font-size:2rem;
+
+    margin-left:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.social:hover{
+    color:#38bdf8;
+}
+
+.centerS{
+    max-width:300px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .guitar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .todo h1{
+        font-size:2.3rem;
+    }
+
+    .sec1 h1{
+        font-size:2.2rem;
+    }
+
+    footer{
+        justify-content:center;
+        text-align:center;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>Infotec.</h1>
+<span>Projetos Scratch</span>
+</div>
+
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#jogos">Jogos</a>
+<a href="#redes">Contato</a>
+</nav>
+
+</header>
+
+<section class="guitar">
+
+<div class="todo">
+
+<h1>🎸 Guitar Hero</h1>
+
+<p>
+
+Projeto desenvolvido pelos alunos
+Caio Henrique e Livia Cardia do
+3º Ano Informática.
+
+<br><br>
+
+O jogo possui duas formas de utilização.
+
+<br><br>
+
+Opção 1:
+Placa Makey Makey,
+Cabo USB,
+Cabos Jacaré e
+Massinha de Modelar.
+
+<br><br>
+
+Opção 2:
+
+<br>↑ Vermelho
+<br>↓ Amarelo
+<br>→ Azul
+<br>← Verde
+
+</p>
+
+<br>
+
+<button
+class="card-btn2"
+onclick="window.open('https://scratch.mit.edu/projects/745861471/fullscreen/')">
+
+Jogar
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+<img
+src="Guitar hero.png"
+class="hero">
+
+</section>
+
+<section class="sec1" id="sobre">
+
+<span class="tag">Scratch</span>
+
+<h1>Projetos Desenvolvidos pelos Alunos</h1>
+
+<p>
+Explore os jogos produzidos pelos estudantes do curso
+Informática para Internet utilizando Scratch.
+</p>
+
+</section>
+
+<section class="sec2" id="jogos">
+    <div class="card">
+    <img src="Pokemon.png" alt="Pokemon Infinite Fusion" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Pokemon Infinite Fusion</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1070193438/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Batman.png" alt="Batman Joker Maze" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Batman Joker's Maze</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1066982033/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Genio quiz.png" alt="Genio Quiz" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Gênio Quiz</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1070681588/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Fogoagua.png" alt="Sonic e Mario" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Sonic e Mario</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1070685533/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Sponja.png" alt="Spongebob Flight" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Spongebob Flight</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1073877425/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Angry.png" alt="Angry Birds Halloween" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Angry Birds Halloween</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1064392867/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Mine.png" alt="Super Minecraft Jump" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Super Minecraft Jump</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1071826286/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Getto.png" alt="Ghetto Heroes" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Ghetto Heroes</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1070293458/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Dark.png" alt="Dark Ness" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Dark Ness</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1073390686/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="Tetris.png" alt="Tetris" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Tetris</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1071804496/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="minecraft.png" alt="Minecraft 2D" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Minecraft 2D</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1066994031/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="mortal.png" alt="Mortal Kombat" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Mortal Kombat</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1070549007/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="water.png" alt="Water Sort" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Water Sort</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1067484457/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="sumbis.png" alt="Zumbis Famintos" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Zumbis Famintos</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1067544239/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+<div class="card">
+    <img src="sonico.png" alt="Sonic 2" class="card-img">
+    <div class="card-box">
+        <h2 class="card-title">Sonic 2</h2>
+    </div>
+    <button class="card-btn"
+    onclick="window.open('https://scratch.mit.edu/projects/1067830709/fullscreen/')">
+    Jogar <i class="fa-solid fa-arrow-right"></i>
+    </button>
+</div>
+
+</section>
+<footer>
+
+    <div class="txtf">
+
+        <p class="sobreroda">
+            Projetos desenvolvidos pelas turmas
+            1°, 2° e 3° anos do curso
+            Informática para Internet.
+        </p>
+
+        <br>
+
+        <a
+        href="https://etecdpm.cps.sp.gov.br/"
+        target="_blank"
+        class="siteetec">
+
+        Site Oficial da ETEC
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        </a>
+
+    </div>
+
+    <div id="redes">
+
+        <i
+        class="fa-brands fa-facebook social"
+        onclick="window.open('https://www.facebook.com/vestibulinhoetecdpm/?locale=pt_BR')">
+        </i>
+
+        <i
+        class="fa-brands fa-instagram social"
+        onclick="window.open('https://www.instagram.com/etecdarcypereira/')">
+        </i>
+
+    </div>
+
+    <img
+    src="regua_horizontal_logo_horizontal_gov_cps_cor.png"
+    alt="Centro Paula Souza"
+    class="centerS">
+
+</footer>
+
+</body>
+</html>
